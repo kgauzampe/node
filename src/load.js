@@ -8,7 +8,7 @@ async function load(x) {
 
         jsonData = JSON.parse(data);
         console.log(jsonData); 
-    })
+    }) 
 
 }
 

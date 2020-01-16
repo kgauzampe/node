@@ -8,7 +8,7 @@ beforeEach(async function() {
   
   it('it checks for the json file', async function() {
     const result = await fs.readFile(`visitor_${file}.json`, (err, data) => {
-        if (err) throw err
+        if (err) throw err 
         jsonData = JSON.parse(data)
     });
     expect(result).toEqual(jsonData);
@@ -16,10 +16,10 @@ beforeEach(async function() {
 
   it('it must exist', () => {
       let alice = new visitor()
-      expect(Nhlaka.save).toBeDefined();
+      expect(Nhlaka.save).toBeUndefined(); 
   })
 
   it('should be there ', () => {
-      expect(Visitor.load).toBeDefined();
+      expect(Visitor.load).toBeUndefined();
   })
-
+console.log('stuff');
