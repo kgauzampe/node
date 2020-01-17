@@ -1,12 +1,14 @@
 let Visitor = require('../src/script')
 let load = require('../src/load')
-let obj = {fullname : "Kgaugelo Mpe",
-           age : "1000",
-           dateofvisit : "12/12/2020",
-           timeofvisit : "10:23",
-           comments : "sdcsfsdgfsrfs",
-           nameofassistant : "me"
-          };
+let fs = require('fs')
+let obj = {
+  fullname: "Kgaugelo Mpe",
+  age: "1001",
+  dateofvisit: "12/12/2020",
+  timeofvisit: "10:23",
+  comments: "sdcsfsdgfsrfs",
+  nameofassistant: "me"
+};
 
 /*let visitor = new Visitor(
   obj.fullName,
@@ -14,25 +16,22 @@ let obj = {fullname : "Kgaugelo Mpe",
   obj.dateofvisit,
   obj.timeofvisit,
   obj.comments,
-  obj.nameofassistant)*/
-  // console.log(obj)
-// Visitor.save()
-  
-  it('it checks for the json file', async function() {
-    let fname = obj.fullname;
-    let nameArr = fname.toLocaleLowerCase().split(' ')
+  obj.nameofassistant)
+   console.log(obj)
+ Visitor.save()*/
 
-    let jsonFile = `visitor_${nameArr[0]}_${nameArr[1]}.json`
+it('checks if object is split', async function () {
+  let fname = obj.fullname;
+  let nameArr = fname.toLocaleLowerCase().split(' ')
+  let jsonFile = `visitor_${nameArr[0]}_${nameArr[1]}.json`
+  expect(fname).toBe('Kgaugelo Mpe')
+  console.log(jsonFile);
+})
 
-    console.log(jsonFile);
-  })
+it('should check if the file was created', async function(){
+  let file = require('../src/script')
+  var fs = require('fs')
+  expect(file).toBeDefined();
+})
 
- /* it('it must exist', () => {
-      let alice = new script()
-      expect(Nhlaka.save).toBeUndefined(); 
-  })
-
-  it('should be there ', () => {
-      expect(Visitor.load).toBeUndefined();
-  })*/
-console.log('stuff');
+//it('should replace ')

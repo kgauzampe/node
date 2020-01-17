@@ -11,7 +11,7 @@ class Visitor{
         this.comments = comments; 
         this.nameOfAssistant = nameOfAssistant;
     }
-    async save() { 
+    async  save() { 
         let query;
         try {
             await fs.writeFile(`visitor_${(this.fullName)
