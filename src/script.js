@@ -1,8 +1,6 @@
 let fs = require('fs');
 let load = require('./load');
 
-
-
 class Visitor{ 
 
     constructor(fullName, age, dateOfVisit, timeOfVisit, comments, nameOfAssistant){
@@ -30,8 +28,8 @@ class Visitor{
  
     }
 }
-let visitor = new Visitor("Kgaugelo Mpe", 26, "14/01/2020","10:30", "no comment", "Portia" );
-visitor.save();
+// let visitor = new Visitor("Kgaugelo Mpe", 26, "14/01/2020","10:30", "no comment", "Portia" );
+// visitor.save();
 module.exports = {
     Visitor
 }
