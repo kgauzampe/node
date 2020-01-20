@@ -20,7 +20,7 @@ let visitor = new Visitor(
    console.log(obj)
  //Visitor.save()
 
-it('', function  () {
+it('testing objects', function  () {
   let porche = new Visitor(obj.fullName,obj.age,obj.dateofvisit,obj.timeofvisit,
     obj.comments, obj.nameofassistant)
 expect(porche.toString()).toBe(obj.toString())
