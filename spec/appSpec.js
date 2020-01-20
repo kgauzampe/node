@@ -1,4 +1,4 @@
-let Visitor = require('../src/script')
+let {Visitor} = require('../src/script')
 let load = require('../src/load')
 let fs = require('fs')
 let obj = {
@@ -10,7 +10,7 @@ let obj = {
   nameofassistant: "me"
 };
 
-/*let visitor = new Visitor(
+let visitor = new Visitor(
   obj.fullName,
   obj.age, 
   obj.dateofvisit,
@@ -18,7 +18,16 @@ let obj = {
   obj.comments,
   obj.nameofassistant)
    console.log(obj)
- Visitor.save()*/
+ //Visitor.save()
+
+it('', function  () {
+  let porche = new Visitor(obj.fullName,obj.age,obj.dateofvisit,obj.timeofvisit,
+    obj.comments, obj.nameofassistant)
+expect(porche.toString()).toBe(obj.toString())
+
+
+})
+
 
 it('checks if object is split', async function () {
   let fname = obj.fullname;
@@ -34,4 +43,3 @@ it('should check if the file was created', async function(){
   expect(file).toBeDefined();
 })
 
-//it('should replace ')
