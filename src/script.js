@@ -29,8 +29,7 @@ class Visitor{
  
     }
 }
-let visitor = new Visitor('Kgauza Mpe',30, '11/12/2013', '12:31', 'no comment','Mpumelelo' )
- visitor.save();
+
 module.exports = {
     Visitor
 }
