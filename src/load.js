@@ -7,7 +7,7 @@ async function load(x) {
         if (err) throw err
 
         jsonData = JSON.parse(data);
-        console.log(jsonData);  
+        console.log(jsonData);   
     }) 
 
 }

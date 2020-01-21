@@ -3,7 +3,7 @@ let load = require('../src/load')
 let fs = require('fs')
 let obj = {
   fullname: "Kgaugelo Mpe",
-  age: "1001",
+  age: "1001", 
   dateofvisit: "12/12/2020",
   timeofvisit: "10:23",
   comments: "sdcsfsdgfsrfs",
@@ -16,9 +16,16 @@ let visitor = new Visitor(
   obj.dateofvisit,
   obj.timeofvisit,
   obj.comments,
-  obj.nameofassistant)
-   console.log(obj)
- //Visitor.save()
+  obj.nameofassistant) 
+
+let path = `${__dirname}/file`
+
+  try{
+    visitor.save(path)
+  }catch(err){
+    throw err;
+  }
+ 
 
 it('testing objects', function  () {
   let porche = new Visitor(obj.fullName,obj.age,obj.dateofvisit,obj.timeofvisit,
