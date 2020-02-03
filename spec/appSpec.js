@@ -4,19 +4,19 @@ let fs = require('fs')
 let obj = {
   fullName: "Kgaugelo Mpe",
   age: "1001", 
-  dateofvisit: "12/12/2020",
-  timeofvisit: "10:23",
+  dateOfVisit: "12/12/2020",
+  timeOfVisit: "10:23",
   comments: "sdcsfsdgfsrfs",
-  nameofassistant: "me"
+  nameOfAssistant: "me"
 };
 
 let visitor = new Visitor(
   obj.fullName,
   obj.age, 
-  obj.dateofvisit,
-  obj.timeofvisit,
+  obj.dateOfVisit,
+  obj.timeOfVisit,
   obj.comments,
-  obj.nameofassistant) 
+  obj.nameOfAssistant) 
 
 let path = `${__dirname}/file`
 
@@ -28,9 +28,9 @@ let path = `${__dirname}/file`
  
 
 it('testing objects', function  () {
-  let porche = new Visitor(obj.fullName,obj.age,obj.dateofvisit,obj.timeofvisit,
-    obj.comments, obj.nameofassistant)
-expect(porche.toString()).toBe(obj.toString())
+  let porche = new Visitor(obj.fullName,obj.age,obj.dateOfVisit,obj.timeOfVisit,
+    obj.comments, obj.nameOfAssistant)
+expect(porche.toString()).toBe(obj.toString()) 
 
 
 })

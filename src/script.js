@@ -1,5 +1,4 @@
 let fs = require('fs');
-let load = require('./load');
 
 
 class Visitor{ 
@@ -29,12 +28,24 @@ class Visitor{
  
     }
 }
+async function load(x) { 
+    let jsonData = {};
+    let file = x.toLowerCase().replace(' ','_');
+    await fs.readFile(`visitor_${file}.json`, (err, data) => {
+        if (err) throw err
 
-module.exports = {
-    Visitor
+        jsonData = JSON.parse(data);
+        console.log(jsonData);   
+    }) 
+
 }
 
-//load("Nhlaka Sola");
+
+module.exports = {
+    Visitor,
+    load
+}
+
 
 
 
